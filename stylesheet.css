@@ -1,0 +1,267 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;   
+}
+h1, h2, h6,h4 {   
+  font-family: 'Orbitron', sans-serif;
+}
+p {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.box {
+  display : flex;
+}
+.nl {
+    display : inline-block;
+    position : absolute;
+    right : 10px;
+    top : 1em;
+}
+input {
+    display : none;
+}
+.check {
+   position : absolute;
+   left : 25px;
+   top : 1em;
+   color : black;
+   background-color: white;
+   padding : 3px 6px;
+   border-radius : 1.6px;
+   opacity : 0.7;
+   cursor : pointer;
+}
+.nl {
+    color : black;
+    padding : 2px;
+    background-color: white;
+    opacity : 0.7;
+    cursor : pointer;
+}
+.nl:hover {
+    font-size : 1.1rem;
+    opacity : 1;
+}
+.check:hover {
+   opacity : 1;
+   font-size : 1.07rem;
+}
+input:checked~.sidebar {
+    left : 0px;  
+}
+input:checked ~ .info {
+    margin-left : 17%;
+}
+.top {
+    text-align : center;
+    padding-top : 0.5rem;
+    padding-bottom : 0.5rem;
+}
+.sidebar {
+    display : flex;
+    flex-direction : column;
+    height : 100vh;
+    width : 17%;
+    background-color: #3059cf;
+    position : fixed;
+    left : -400px;
+     }
+.logo {
+    height : 4rem;
+    width : 100%;
+}
+.line {
+    border-top : 2px solid white;
+}
+nav {
+   flex : 1; 
+}
+nav ul {
+    height : 100%;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    line-height : 4rem;
+    list-style : none;   
+    margin : auto;  
+   
+    padding-top : 1rem;
+    padding-left : 0px;
+}
+nav li {
+    margin-top: 3rem;
+}
+nav a {
+    text-decoration: none;
+    color : white;
+    font-size : 1.2rem;
+    font-weight : bolder;
+    line-height: 4rem;
+     margin-top : 4rem;
+}
+nav a:hover {
+    text-decoration: 2px underline white;
+    text-underline-offset: 3px;
+    color : white;
+}
+.info {
+    height : auto;
+    width : 100%;
+    display : flex;
+    flex-direction : column;
+    /* margin-left : 17%; */
+}
+.top h1 {
+    font-weight : bold;
+    color : purple;
+}
+.About {
+ height : 100vh;
+ background: Url("./images/5305323.jpg") no-repeat center center/cover;
+ display : flex;
+ align-items : center;
+ justify-content: space-evenly;
+}
+.my {
+    text-align : start;
+    padding : 1rem;
+    height : auto;
+    width : 65%;
+}
+.heading {
+    font-family: 'Space Grotesk', sans-serif;
+    text-align : start;
+    font-weight : bolder;
+}
+.hw, .name {
+    font-weight : bold;
+    font-size : 2.01rem;
+}
+.my p {
+    text-align : start;
+    font-weight : 500;
+    font-size : 1.05rem;
+    color : balck;
+}
+.pic {
+    width : 21%;
+    height : 50%;
+    margin : auto;
+}
+.pic img{
+    height : 100%;
+    width : 100%;
+    border : 2px ridge purple;
+    border-radius : 3rem;
+    align-self : center;
+}
+
+.Education {
+    background-color: #CFA630;
+    height : auto;
+    width : 100%;
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    justify-content : space-evenly;
+}
+.cards {
+    background-color: white;
+    text-align : center;
+    padding : 2rem 1.5rem 1rem 1.5rem;
+    height : auto;
+    width : 40%;
+    border-radius : 1.23rem;
+    rotate : 0deg;
+    margin-top : 2rem;
+}
+.college {
+    margin-bottom : 2rem;
+}
+.pu{
+    display : flex;
+    align-items : center;
+}
+
+.Contact {
+    margin-top : 1rem;
+    text-align : center;
+}
+.ls{
+    padding-left : 0px;
+    display : flex;
+    justify-content : center;
+    gap : 4rem;
+}
+.ls li {
+    list-style : none;
+}
+.ls i {
+    color: black;
+    opacity : 0.9;
+}
+.ls i:hover {
+    opacity : 1;
+    font-size : 1.7rem;
+}
+.copy {
+    margin : 1rem;
+}
+
+@media(max-width:970px) {
+    .info {
+        width : 100%;
+        margin-left : 0;
+    }
+     .About {
+        flex-direction: column;
+        height : auto;
+     }
+     .pic {
+        margin-top: 1rem;
+        margin-bottom: 1.25rem;
+        width : 40%;
+        height : 40%; 
+     }
+     .my {
+        width : 85%;
+        padding : 0rem;
+        padding-bottom : 1rem;
+        padding-top : 1rem;
+     }
+     .sidebar {
+        height : auto;
+        width : 40%;
+        z-index: 10;
+     }
+     .check:checked ~ .info {
+        margin : 0px;
+     }
+}
+@media(max-width: 590px) {
+    .cards {
+        width : 80%;
+        gap : 2rem;
+    }
+    .check {
+        font-size : 0.8rem;
+        left: 0px;
+    }
+    .top h1{
+         font-size : 1.7rem;
+         text-align : end;
+         margin-right : 3px;
+    }
+}
+@media(max-width : 333px) {
+    .top h1 {
+        font-size : 1.55rem;
+        text-align : end;
+        margin-right : 2px;
+    }
+}
