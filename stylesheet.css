@@ -70,6 +70,9 @@ input:checked ~ .info {
     background-color: #3059cf;
     position : fixed;
     left : -400px;
+    transition-duration : 200ms;
+    transition-delay : 0s;
+    transition-timing-function: ease-in-out;
      }
 .logo {
     height : 4rem;
@@ -114,6 +117,9 @@ nav a:hover {
     width : 100%;
     display : flex;
     flex-direction : column;
+    transition-delay: 0ms;
+    transition-timing-function: ease-in-out;
+    transition-duration : 100ms;
     /* margin-left : 17%; */
 }
 .top h1 {
@@ -121,7 +127,7 @@ nav a:hover {
     color : purple;
 }
 .About {
- height : 100vh;
+ height : 95vh;
  background: Url("./images/5305323.jpg") no-repeat center center/cover;
  display : flex;
  align-items : center;
@@ -140,12 +146,12 @@ nav a:hover {
 }
 .hw, .name {
     font-weight : bold;
-    font-size : 2.01rem;
+    font-size : 2.03rem;
 }
 .my p {
     text-align : start;
     font-weight : 500;
-    font-size : 1.05rem;
+    font-size : 1.07rem;
     color : balck;
 }
 .pic {
@@ -238,6 +244,15 @@ nav a:hover {
         height : auto;
         width : 40%;
         z-index: 10;
+     }
+     nav ul {
+        padding-top : 0px;
+     }
+     nav li {
+        padding-top : 1rem;
+        text-align : center;
+        margin-top : 1rem;
+        margin-bottom : 1rem;
      }
      .check:checked ~ .info {
         margin : 0px;
